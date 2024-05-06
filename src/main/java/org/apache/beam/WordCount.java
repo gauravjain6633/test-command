@@ -174,7 +174,7 @@ public class WordCount {
 
   static void runWordCount(WordCountOptions options) {
     Pipeline p = Pipeline.create(options);
-
+    long n =10;
     // Concepts #2 and #3: Our pipeline applies the composite CountWords transform, and passes the
     // static FormatAsTextFn() to the ParDo transform.
     p.apply("ReadLines", TextIO.read().from(options.getInputFile()))
